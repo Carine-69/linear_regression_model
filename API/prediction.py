@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field
 import joblib
 import pandas as pd
 import numpy as np
+import os
 # from google.colab import drive
 
 
@@ -23,6 +24,7 @@ import numpy as np
 
 
 # load the best trained model
+model_path = os.path.join(os.path.dirname(__file__), 'best_model.pkl')
 model = joblib.load('best_model.pkl')
 
 
