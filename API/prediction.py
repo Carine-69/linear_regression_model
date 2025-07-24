@@ -77,6 +77,14 @@ app.add_middleware(
 )
 
 
+# In[8]:
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Governance prediction API is live!"}
+
+
 # In[ ]:
 
 
