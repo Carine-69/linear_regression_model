@@ -19,7 +19,7 @@ class GovernancePredictorApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
-        '/predict': (context) => PredictionInputPage(), // Named route
+        // '/predict': (context) => PredictionInputPage(), // Named route
       },
     );
   }

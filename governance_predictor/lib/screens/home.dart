@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 import 'dart:convert';
-import 'prediction_input.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,6 +36,15 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  Future<void> _launchSwagger() async {
+    final url = Uri.parse(
+      'https://linear-regression-model-w953.onrender.com/docs',
+    );
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,13 +69,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 24),
               const Text(
-                'Tap below to input prediction info:',
+                'Tap below to go to Swagger UI:',
                 style: TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 16),
               ElevatedButton.icon(
-                icon: const Icon(Icons.arrow_forward),
-                label: const Text('Go to Prediction'),
+                icon: const Icon(Icons.open_in_browser),
+                label: const Text('Open Swagger Docs'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal,
                   padding: const EdgeInsets.symmetric(
@@ -74,9 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     vertical: 12,
                   ),
                 ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/predict');
-                },
+                onPressed: _launchSwagger,
               ),
             ],
           ),
