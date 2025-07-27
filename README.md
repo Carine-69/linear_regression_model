@@ -7,7 +7,7 @@ It features a **public FastAPI backend** that serves predictions and a **Flutter
 
 ### 🔗 Public API Endpoint (FastAPI)
 
-**➡️ [video of the demo](https://youtu.be/OCivXTgumCE)**
+**➡️ *https://linear-regression-model-w953.onrender.com/docs*
 Use this Swagger UI to test the `/predict` endpoint with JSON input.
 
 Example payload:
@@ -32,7 +32,7 @@ etc
 
 ### 📹 Demo Video (YouTube)
 
-**▶️(https://www.loom.com/share/fe442c46c64e4a5ba7afbdbbb2ac8c00?sid=b5240d3b-bf4b-4ff3-a51f-e5e824636ff2), a link to the demo
+**▶️(https://youtu.be/OCivXTgumCE)), a link to the demo
 
 ###  How to Run the Mobile App
 
