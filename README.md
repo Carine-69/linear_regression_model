@@ -7,7 +7,7 @@ It features a **public FastAPI backend** that serves predictions and a **Flutter
 
 ### 🔗 Public API Endpoint (FastAPI)
 
-**➡️ [https://linear-regression-model-w953.onrender.com/docs](https://linear-regression-model-w953.onrender.com/docs)**
+**➡️ [video of the demo](https://youtu.be/OCivXTgumCE)**
 Use this Swagger UI to test the `/predict` endpoint with JSON input.
 
 Example payload:
